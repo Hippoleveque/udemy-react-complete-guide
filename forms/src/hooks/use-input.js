@@ -4,7 +4,8 @@ const useInput = (inputValidationHandler) => {
     const [enteredInput, setEnteredInput] = useState("");
     const [inputWasTouched, setInputWasTouched] = useState(false);
 
-    const enteredInputIsValid = inputValidationHandler(enteredInput, inputWasTouched);
+    const enteredInputIsValid = inputValidationHandler(enteredInput);
+    const 
 
     const onChangeInputHandler = (event) => {
         setEnteredInput(event.target.value);
@@ -14,7 +15,7 @@ const useInput = (inputValidationHandler) => {
         setInputWasTouched(true);
     }
 
-    const onCleanInput = () => {
+    const onCleanInputHandler = () => {
         setEnteredInput("");
         setInputWasTouched(false);
     }
@@ -28,7 +29,8 @@ const useInput = (inputValidationHandler) => {
         enteredInputIsValid,
         onChangeInputHandler,
         onBlurInputHandler,
-        onCleanInput
+        onCleanInputHandler,
+        inputClasses
     }
 
 };
