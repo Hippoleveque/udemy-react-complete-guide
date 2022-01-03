@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useInput } from "../hooks/use-input";
+import useInput from "../hooks/use-input";
 
 const SimpleInput = (props) => {
   const nameValidationHandler = (enteredName) => {
@@ -13,6 +13,7 @@ const SimpleInput = (props) => {
   const {
     enteredInput: enteredName,
     enteredInputIsValid: enteredNameIsValid,
+    inputIsInvalid: nameInputIsInvalid,
     onChangeInputHandler: onChangeNameHandler,
     onBlurInputHandler: onBlurNameHandler,
     onCleanInputHandler: onCleanNameHandler,
@@ -22,6 +23,7 @@ const SimpleInput = (props) => {
   const {
     enteredInput: enteredEmail,
     enteredInputIsValid: enteredEmailIsValid,
+    inputIsInvalid: emailInputIsInvalid,
     onChangeInputHandler: onChangeEmailHandler,
     onBlurInputHandler: onBlurEmailHandler,
     onCleanInputHandler: onCleanEmailHandler,

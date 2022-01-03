@@ -5,7 +5,7 @@ const useInput = (inputValidationHandler) => {
     const [inputWasTouched, setInputWasTouched] = useState(false);
 
     const enteredInputIsValid = inputValidationHandler(enteredInput);
-    const 
+    const inputIsInvalid = !enteredInputIsValid && inputWasTouched;
 
     const onChangeInputHandler = (event) => {
         setEnteredInput(event.target.value);
@@ -27,6 +27,7 @@ const useInput = (inputValidationHandler) => {
     return {
         enteredInput,
         enteredInputIsValid,
+        inputIsInvalid,
         onChangeInputHandler,
         onBlurInputHandler,
         onCleanInputHandler,
